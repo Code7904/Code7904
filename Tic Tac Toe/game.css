@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    border: none;
+}
+
+body {
+    background-color: #87ceeb;
+    color: white;
+    height: 100vh;
+}
+
+/* TITLE */
+
+.title {
+    color: #e0115f;
+    text-align: center;
+    font-size: clamp(3rem, 2.273rem + 3.64vw, 5rem);
+}
+
+/* WHOLE BOX */
+
+.game-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 85vh;
+}
+
+/* MSG  BOX $ NEW GAME BTN */
+
+.msg-container {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+/* ALL TEXT */
+
+.text {
+    font-size: clamp(1.5rem, 0.333rem + 5.33vw, 2rem);
+    font-weight: bolder;
+    color: #ff3737;
+}
+
+/* ALL O & X BOX CONTAINER */
+
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    position: fixed;
+}
+
+/* O & X BOX */
+
+.box {
+    height: clamp(6rem, 4.545rem + 7.27vw, 10rem);
+    width: clamp(6rem, 4.545rem + 7.27vw, 10rem);
+    font-size: clamp(5rem, 3.118rem + 9.41vw, 9rem);
+    border-radius: 20px;
+    background: transparent;
+    border: 1px solid crimson;
+    text-align: center;
+    box-shadow: 0px 0px 3px 1px #e6062b;
+    color: crimson;
+}
+
+/* FOR JS */
+
+.hide {
+    visibility: hidden;
+}
+
+/* RESET BTN */
+
+#reset-btn {
+    position: absolute;
+    right: 0;
+    margin-right: 2rem;
+    padding: clamp(1rem, 0.4rem + 1.6vh, 1.5rem) clamp(2rem, -2.667rem + 21.33vw, 4rem);
+    border-radius: 5rem;
+    box-shadow: 0px 0px 5px 2px crimson;
+    border: 2px solid crimson;
+    background: transparent;
+}
+
+/* NEW BTN */
+
+#new-btn {
+    padding: clamp(1rem, 0.4rem + 1.6vh, 1.5rem) clamp(2rem, -2.667rem + 21.33vw, 4rem);
+    border-radius: 5rem;
+    box-shadow: 0px 0px 5px 2px crimson;
+    border: 2px solid crimson;
+    background: transparent;
+}
