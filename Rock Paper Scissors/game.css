@@ -20,6 +20,8 @@ body {
     justify-content: center;
 }
 
+
+ /* options container */
 .choices {
     display: flex;
     align-items: center;
@@ -28,6 +30,8 @@ body {
     margin-top: 2rem;
 }
 
+
+/* each options */
 .choice {
     height: 150px;
     width: 150px;
@@ -38,6 +42,8 @@ body {
     transition: all ease .5s;
 }
 
+
+/* options img */
 img {
     height: 150px;
     width: 150px;
@@ -54,6 +60,8 @@ img:hover {
     scale: 1.07;
 }
 
+
+/* score board */
 .score-board {
     display: inline-flex;
     align-items: center;
@@ -77,10 +85,8 @@ img:hover {
     font-size: 3rem;
 }
 
-.result {
-    /* display: inline; */
-}
 
+/* game msg  */
 #msg{
     display: inline;
     font-size: 2rem;
