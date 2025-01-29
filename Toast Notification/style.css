@@ -1,0 +1,180 @@
+@font-face {
+    font-family: Merienda;
+    src: url(Merienda-VariableFont_wght.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-family: Merienda;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #22242F;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+button {
+    font-family: Merienda;
+    padding: 0.3rem 1rem;
+    color: var(--bottom-color);
+    font-size: 1rem;
+    background: transparent;
+    outline: none;
+    border: 1px solid var(--bottom-color);
+    border-radius: 0.425rem;
+}
+
+.notifications {
+    position: fixed;
+    top: 1.5rem;
+    right: 0;
+}
+
+.toast {
+    color: #fff;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to right, #0abf3055, #22242f 30%);
+    width: clamp(20rem, 18.182rem + 7.27vw, 25rem);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    animation: show 0.3s ease 1 forwards;
+}
+
+.toast img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toast span,
+.toast i:nth-child(3) {
+    color: #fff;
+    opacity: 0.6;
+}
+
+img {
+    height: 1.5rem;
+}
+
+.toast::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--bottom-color);
+    width: 100%;
+    height: 0.275rem;
+    box-shadow: 0 0 10px var(--bottom-color);
+    animation: timeOut 5s linear 1 forwards;
+}
+
+@keyframes show{
+    0%{
+        transform: translateX(100%);
+    }
+    40%{
+        transform: translateX(-5%);
+    }
+    80%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-10%);
+    }
+}
+
+@keyframes timeOut {
+    to {
+        width: 0;
+    }
+}
+.toast.success{
+    --bottom-color: #0abf30;
+    background-image: 
+    linear-gradient(to right, #0abf3055, #22242f 30%);
+}
+.toast.error{
+    --bottom-color: #f24d4c;
+    background-image: 
+        linear-gradient(
+            to right, #f24d4c55, #22242F 30%
+        );
+}
+.toast.warning{
+    --bottom-color: #e9bd0c;
+    background-image: 
+        linear-gradient(
+            to right, #e9bd0c55, #22242F 30%
+        );
+}
+.toast.info{
+    --bottom-color: #3498db;
+    background-image: 
+        linear-gradient(
+            to right, #3498db55, #22242F 30%
+        );
+}
+.toast.like{
+    --bottom-color: #e71d4f;
+    background-image: 
+        linear-gradient(
+            to right, #e71d4f55, #22242F 30%
+        );
+}
+
+
+button#success{
+    --bottom-color: #0abf30;
+    background-image: 
+    linear-gradient(
+        to right, #0abf3055, #22242F, #0abf3055)
+}
+
+button#error{
+    --bottom-color: #f24d4c;
+    background-image: 
+    linear-gradient(
+        to right, #f24d4c55, #22242F, #f24d4c55)
+}
+
+button#warning{
+    --bottom-color: #e9bd0c;
+    background-image: 
+    linear-gradient(
+        to right, #e9bd0c55, #22242F, #e9bd0c55)
+}
+
+button#info{
+    --bottom-color: #3498db;
+    background-image: 
+    linear-gradient(
+        to right, #3498db55, #22242F, #3498db55)
+}
+
+button#like{
+    --bottom-color: #e71d4f;
+    background-image: 
+    linear-gradient(
+        to right, #e71d4f55, #22242F, #e71d4f55);
+}
